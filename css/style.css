@@ -23,7 +23,7 @@ body{
     font-family: "Montserrat", sans-serif;
     margin:0;
     color: var(--line);
-    background: var(--cream);
+    background: var(--muted);
     overflow-x: hidden;
 
 }
@@ -62,18 +62,17 @@ padding:01.25rem;
   min-height: 80px;
 }
 
-.logo-fj-beauty-lab {
+.logo-fj {
   display: flex;
   align-items: center;
   gap: .6rem;
   flex-shrink: 0;
 }
 
-.logo-fj-beauty-lab .logo {
+.logo-fj img {
     height: 80px;
     width: auto;
     max-width: 200px;
-    
 }
 
 /* Navegación y lista en horizontal */
@@ -241,6 +240,132 @@ padding:01.25rem;
   text-transform: uppercase;
   color: var(--sage-dark);
 }
+
+<!--SECCIÓN NOSOTROS-->
+.about-section {
+  padding-block: 5rem;
+}
+
+.products-grid {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.product-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--coral-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-image-wrap {
+  overflow: hidden;
+}
+
+
+.product-image-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.05);
+}
+
+
+.product-body {
+  padding: 1.5rem;
+}
+
+
+.product-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+
+.product-header h3 {
+  font-size: 1.25rem;
+}
+
+
+.product-price {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+
+.product-desc {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--line);
+}
+
+.about-grid {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+
+.about-text {
+  margin-top: 1.5rem;
+  opacity: 0.88;
+}
+
+
+.about-text + .about-text {
+  margin-top: 1rem;
+}
+
+.menu-section {
+  padding-block: 5rem;
+}
+
 
 /*--FOOTER--*/ 
 
